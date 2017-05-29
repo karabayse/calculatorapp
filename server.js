@@ -21,30 +21,23 @@ app.get('/', function(req, res){
 });
 
 app.post('/calculation', function(req, res){
-  console.log('input request', req.body.Type);
-
-  var Add = "add";
-  var Subtract = "subtract";
-  var Multiply = "multiply";
-  var Divide = "divide";
-  var Clear = "clear";
-
+  console.log('in calculation post');
   var calculationResponse;
 
-  if ('#add'){
+  if (req.body.Type == "add"){
     calculationResponse = parseInt(req.body.Input1) + parseInt(req.body.Input2);
   } else if
-      ('#subtract'){
+      (req.body.Type == "subtract"){
     calculationResponse = parseInt(req.body.Input1) - parseInt(req.body.Input2);
   } else if
-      ('#multiply'){
+      (req.body.Type == "multiply"){
     calculationResponse = parseInt(req.body.Input1) * parseInt(req.body.Input2);
   } else if
-      ('#divide'){
-        calculaltionResponse = parseInt(req.body.Input1) / parseInt(req.body.Input2);
+      (req.body.Type == "divide"){
+        calculationResponse = parseInt(req.body.Input1) / parseInt(req.body.Input2);
   } else if
-      ('#clear'){
-        calculationResponse = ('');
+      (req.body.Type == "clear"){
+        $('#firstInput').empty();
     }
       res.send(calculationResponse.toString());
 });
