@@ -20,6 +20,7 @@ app.get('/', function(req, res){
   res.sendFile(path.resolve("views/index.html"));
 });
 
+// post route for calculation
 app.post('/calculation', function(req, res){
   console.log('in calculation post');
   var calculationResponse;
@@ -40,4 +41,4 @@ app.post('/calculation', function(req, res){
         $('#firstInput').empty();
     }
       res.send(calculationResponse.toString());
-});
+}); // end post route for calculation

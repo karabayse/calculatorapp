@@ -31,5 +31,5 @@ function calculation(){
       console.log(response);
       $("#outputDiv").append("<h1>" + response + "</h1");
     }
-  }); // end calculation function
-}
+  }); // end ajax call
+}  // end calculation function
