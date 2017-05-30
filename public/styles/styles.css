@@ -1,3 +1,9 @@
 body {
-  background-color: blue;
+  background-color: teal;
+  text-decoration-color: white;
+  font-family: copperplate;
+  text-align: center;
+  background-image: url('https://lh3.googleusercontent.com/FpQXb3fjRebih0ZMiuXK4NuWARD4zyG-5un8UYDoM0ha7IBOE9iqBtZYbxpV2kKB6w=w300');
+  background-size: 100%;
+  background-repeat: no-repeat;
 }

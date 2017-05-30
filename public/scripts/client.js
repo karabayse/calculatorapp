@@ -7,7 +7,8 @@ function onReady(){
   console.log('in onReady function');
 
 // event listeners  -->  calculator BUTTONS
-$('.button').on('click', calculation);
+$('.calculate').on('click', calculation);
+$('.clear').on('click', clear);
 } // end of onReady function
 
 // calculation function
@@ -33,3 +34,10 @@ function calculation(){
     }
   }); // end ajax call
 }  // end calculation function
+
+// clear function
+function clear(){
+  $('#firstInput').val('');
+  $('#secondInput').val('');
+  $('#outputDiv').empty();
+}

@@ -36,9 +36,6 @@ app.post('/calculation', function(req, res){
   } else if
       (req.body.Type == "divide"){
         calculationResponse = parseInt(req.body.Input1) / parseInt(req.body.Input2);
-  } else if
-      (req.body.Type == "clear"){
-        $('#firstInput').empty();
-    }
+  }
       res.send(calculationResponse.toString());
 }); // end post route for calculation
